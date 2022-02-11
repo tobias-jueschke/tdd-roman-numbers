@@ -1,0 +1,23 @@
+{
+  "name": "tdd-roman-numbers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobias-jueschke/tdd-roman-numbers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tobias-jueschke/tdd-roman-numbers/issues"
+  },
+  "homepage": "https://github.com/tobias-jueschke/tdd-roman-numbers#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
