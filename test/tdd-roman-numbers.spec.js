@@ -26,30 +26,6 @@ const convert = (number) => {
 };
 
 describe('roman numbers converter',() => {
-  it('split() should return array', () => {
-    expect(Array.isArray(split(1))).toBe(true);
-  })
-
-  it('split() should return [1] for input 1', () => {
-    expect(split(1)).toEqual([1]);
-  })
-
-  it('split() should return [1,1] for input 2', () => {
-    expect(split(2)).toEqual([1,1]);
-  })
-
-  it('split() should return [1,1,1] for input 3', () => {
-    expect(split(3)).toEqual([1,1,1]);
-  })
-
-  it('split() should return [1,5] for input 4', () => {
-    expect(split(4)).toEqual([1,5]);
-  })
-
-  it('split() should return [5] for input 5', () => {
-    expect(split(5)).toEqual([5]);
-  })
-
   it('convert() should return string', () => {
     expect(typeof convert(1)).toBe('string');
   })
