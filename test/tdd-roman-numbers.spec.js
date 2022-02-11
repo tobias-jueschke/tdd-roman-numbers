@@ -1,9 +1,76 @@
-const convert = () => {
-  return true;
+const map = {
+  1: 'I',
+  5: 'V',
+  10: 'X',
+  50: 'L',
+  100: 'C',
+  500: 'D',
+  1000: 'M'
 };
 
-describe('this and that',() => {
-  it('that and this', () => {
-    expect(convert()).toBe(true);
+const convert = (number) => {
+  switch (number) {
+    case 1:
+      return 'I';
+    case 2:
+      return 'II';
+    case 3:
+      return 'III';
+    case 4:
+      return 'IV';
+    case 5:
+      return 'V';
+    case 6:
+      return 'VI';
+  }
+};
+
+describe('roman numbers converter',() => {
+  it('split() should return array', () => {
+    expect(Array.isArray(split(1))).toBe(true);
   })
+
+  it('split() should return [1] for input 1', () => {
+    expect(split(1)).toEqual([1]);
+  })
+
+  it('split() should return [1,1] for input 2', () => {
+    expect(split(2)).toEqual([1,1]);
+  })
+
+  it('split() should return [1,1,1] for input 3', () => {
+    expect(split(3)).toEqual([1,1,1]);
+  })
+
+  it('split() should return [1,5] for input 4', () => {
+    expect(split(4)).toEqual([1,5]);
+  })
+
+  it('split() should return [5] for input 5', () => {
+    expect(split(5)).toEqual([5]);
+  })
+
+  it('convert() should return string', () => {
+    expect(typeof convert(1)).toBe('string');
+  })
+
+  it('convert() should return "I" for input 1', () => {
+    expect(convert(1)).toBe('I');
+  })
+
+  it('convert() should return "II" for input 2', () => {
+    expect(convert(2)).toBe('II');
+  })
+
+  it('convert() should return "IV" for input 4', () => {
+    expect(convert(4)).toBe('IV');
+  })
+
+  it('convert() should return "V" for input 5', () => {
+    expect(convert(5)).toBe('V');
+  });
+
+  it('convert() should return "VI" for input 6', () => {
+    expect(convert(6)).toBe('VI');
+  });
 })
