@@ -68,7 +68,7 @@ describe('Roman numbers', () => {
     expect(convert(60)).toBe('LX');
   });
 
-  it('should return MDCCCCLXXXIIII for a given number 1984', () => {
+  it('should return MCMLXXXIV for a given number 1984', () => {
     expect(convert(1984)).toBe('MCMLXXXIV');
   });
 
