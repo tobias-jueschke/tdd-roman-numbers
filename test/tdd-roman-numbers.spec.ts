@@ -109,4 +109,8 @@ describe('Roman numbers', () => {
     expect(convert(2000)).toBe('MM');
   });
 
+  it('should return an empty string for a given negative number', () => {
+    expect(convert(-5)).toBe('');
+  });
+
 })
