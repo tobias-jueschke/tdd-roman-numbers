@@ -32,6 +32,7 @@ const convert = (number: number) => {
 }
 
 describe('Roman numbers', () => {
+
   it('should return I for a given number 1', () => {
     expect(convert(1)).toBe('I');
   });
@@ -44,16 +45,48 @@ describe('Roman numbers', () => {
     expect(convert(5)).toBe('V');
   });
 
-  it('should return VII for a given number 7', () => {
-    expect(convert(7)).toBe('VII');
-  });
-
   it('should return IX for a given number 9', () => {
     expect(convert(9)).toBe('IX');
   });
 
   it('should return X for a given number 10', () => {
     expect(convert(10)).toBe('X');
+  });
+
+  it('should return XL for a given number 40', () => {
+    expect(convert(40)).toBe('XL');
+  });
+
+  it('should return L for a given number 50', () => {
+    expect(convert(50)).toBe('L');
+  });
+
+  it('should return XC for a given number 90', () => {
+    expect(convert(90)).toBe('XC');
+  });
+
+  it('should return C for a given number 100', () => {
+    expect(convert(100)).toBe('C');
+  });
+
+  it('should return CD for a given number 400', () => {
+    expect(convert(400)).toBe('CD');
+  });
+
+  it('should return D for a given number 500', () => {
+    expect(convert(500)).toBe('D');
+  });
+
+  it('should return CM for a given number 900', () => {
+    expect(convert(900)).toBe('CM');
+  });
+
+  it('should return an empty string, because the romans did not know about zero, for a given number 0', () => {
+    expect(convert(0)).toBe('');
+  });
+
+  it('should return VII for a given number 7', () => {
+    expect(convert(7)).toBe('VII');
   });
 
   it('should return XIII for a given number 13', () => {
